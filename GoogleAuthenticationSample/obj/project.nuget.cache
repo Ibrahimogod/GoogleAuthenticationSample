@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "l73lYh2kibBtLDBSEGRfuTIpWVIR99R8+0wPq7/5YdHnC0+HdVsH6DiBBydodpjXPx1Ltdi8ORySrfUdnU5WiQ==",
+  "success": true,
+  "projectFilePath": "D:\\Users\\ibadr\\Projects\\GoogleAuthenticationSample\\GoogleAuthenticationSample\\GoogleAuthenticationSample.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ibadr\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\6.0.3\\microsoft.aspnetcore.authentication.google.6.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

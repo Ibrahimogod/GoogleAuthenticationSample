@@ -1,0 +1,49 @@
+﻿@{
+#pragma warning disable CS8602
+}
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+</head>
+
+<body>
+    <div style="margin:100px">
+    @if (User.Identity.IsAuthenticated)
+    {
+        
+         <h2>Issuer: @User.Identity.AuthenticationType</h2>
+        @foreach (var claim in User.Claims)
+        {
+            <h4> @claim.Type : @claim.Value </h4>
+        }
+    }
+    else
+    {
+        <div class="col s12 m6 offset-m3 center-align">
+            <a class="oauth-container btn darken-4 white black-text" href="/api/account/google-login?redirectUri=/Home/Index" style="text-transform:none">
+                <div class="left">
+                    <img width="20" style="margin-top:7px; margin-right:8px" alt="Google sign-in"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                </div>
+                Login with Google
+            </a>
+        </div>
+
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    }
+    </div>
+</body>
+
+</html>
