@@ -23,5 +23,14 @@ namespace GoogleAuthenticationSample.Controllers
 
             return await Task.FromResult(Challenge(properties, GoogleDefaults.AuthenticationScheme));
         }
+
+        [HttpGet]
+        [Route("Logout")]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            return Redirect("/Home/Index");
+        }
     }
 }

@@ -8,6 +8,7 @@ builder.Services
     .AddCookie(options =>
     {
         options.LoginPath = "/api/account/google-login";
+        options.LogoutPath = "/api/account/logout";
     })
     .AddGoogle(options =>
     {
